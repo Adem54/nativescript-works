@@ -1,0 +1,10 @@
+<Frame defaultPage="main-page">
+</Frame>
+<!-- 
+
+Frame icerisinde farkli sayfalari tutuyor ve de bir tane default page i de belirityor hangisi olmasi gerektigini
+Bizim istedigmiz dosya main-page burda default page olarak ondan dolayi da onu yaziyoruz tabi ki
+Yani burdan main-page i arayacak nativescript sonra main-page.xml i arayacak nativescript ve ona redirect olacak 
+Bu arada native-script her zaman .xml file dosyalarini calistirir ve xml dosyalarinin iceriisnde bulunan attributler aracilgii ile  de .js veya .ts uzantili xml dosyasi ile ayni isimdeki dosya yi arar ve onlari birbirne baglar, yani ayni anda ikisini de calistirip, xml icinnde datasi .js veya .ts den gelecek datalari getirir
+Nativescrpt burdan main-page.xml e gidiyor ve orayi gosteriyor son kulaniciya dogal olarak
+-->

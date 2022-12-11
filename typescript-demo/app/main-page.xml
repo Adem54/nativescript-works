@@ -1,0 +1,4 @@
+<!-- app/main-page.xml -->
+<Page xmlns:comps="view/stacklayout" navigatingTo="navigatingTo" class="page">
+    <comps:layout />
+</Page>

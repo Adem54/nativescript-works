@@ -1,0 +1,35 @@
+<Page loaded="myPageWasLoaded">
+    <Page.actionBar>
+        <ActionBar title="My Header"/>
+    </Page.actionBar>
+    <!-- <Label text="Hello" /> -->
+</Page>
+<!-- 
+UI PART-LAYOUT PART DEDGIMIZ KISIM XML SAYFAMIZ OLAN BURASIDIR
+    Kullaniciya gostgerdigmz son sayfamiz burasi ancak bu sayfayi biz, javascript ile mudahele ederek 
+    dinamik yapacagiz nasil yapacagiz bunu, bunu codee-behind olarak bilinen javascrip core modulleri kullanacagiz
+    Yani bu xml sayfamiz ile ayni isimde olan, .js veya .ts dosyamiz iceriisnde biz bunu ele alacagiz ve bu sayfayi dinamik bir sekilde yonetecegiz, interaktifligi ele alacagiz
+    Yani burda bu islemi yapacak olan nativescripttir tabi ki, yani xml dosyasindas ayni isimde bir js veya .ts dosyasi gordgunde ikisini ayni anda okuyor ve aralarinda connection kuruyor..bunun detaylarini tabi gorecegiz ama code-behind yani main-page.xml in code-behind i main-page.ts dir
+    xml dosyasi layout-duzen, yerlesim i kurmak icin kullaniliyor ve .ts veya .js dosyasi ise business-logic in gucunun kullanidigi yer
+
+    Event handlers in nativescript
+    Once html iceriisnde event handler i  nasil kullaniyorduk onu bir hatirlayalim 
+    <body onload="showPage"></body>
+Aynen bu sekidle kullaniyoruz html de biz event handler lari ve sonra da jscript icerisinde bunun kodunu yaziyuoruz hatirlayalim
+Iste burda da xml de de ona benzer bir mantikte kullanacagiz
+xml sayfamizda  yuklenince herhangi bir seyler dinamik olarak gelmesini isteyebiliriz
+<Page loaded="myPageWasLoaded">
+    bunun anlami her ne zman benim page im loaded-yuklenirse yuklendigi zaman bu methodu invoke et,tetikle demektir
+    Peki nativescript bunun bir method oldugunu nasil biliyor, bu methodu yani 
+    <Page loaded="myPageWasLoaded"> xml de main-elemntin attributune yazdigmz bu methodu bizim bu xml dosyasinin behind-file olan .js veya .ts dosasyasinda olusturp export etmemiz lazim bunu nativescrptin tanimasi bilmesi icin.... 
+   
+-->
+<!--
+ACTION-BAR WIDGET
+    UI-WIDGETS-NATIVESCRIPT TARAFINDAN BIZIM KULLANMAMIZ ICIN DEFAULT OLARAK SAGLANAN .XML DOSYALARIMZDIR
+Biz widget diye her bir parcaciga diyoruz 
+  <Page.actionBar>
+        <ActionBar title="My Header"/>
+    </Page.actionBar>
+Bu sekilde action-bar olusturunca bu ozel bir action-bar olusturuyor
+ -->
