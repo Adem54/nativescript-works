@@ -1,0 +1,8 @@
+<Frame defaultPage="main-page2">
+</Frame>
+<!--
+    Container farkli sayfalari barindiran container gibi dusunebiliriz
+    Ve de sayfalar arasi navigate olurken Frame kullanilir
+    Ve burda default-page main-page olsun diye verilmis ondan dolayi da main-page.xml ekrana geliyor
+    Uygulama sirasi ile ilk olarak app.ts e gider, app.ts de hangi sayfadan baslatilacagi, ni okur ve app-root.xml e gelir ve burda da Frame ler sayesinde burda verilen safyaya navige olur, redirect ederek main-page2 ya gider ve orayi calistirir....
+-->

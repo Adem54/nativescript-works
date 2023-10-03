@@ -1,0 +1,6 @@
+<Page>
+    <Label text="Hello Nativescript!" />
+</Page>
+<!--
+    Bu sayfa bizim, interface imizi olustrudgumuz sayfadir ve, xml icerisinde biz genellikle disardan kutuphaneler araciligi ile html taglarina benzer taglar seklinde kullanabilecegimz taglar kullanaagiz ve ayni sekilde taglarin icinde de css class lari kullanarak, interfac eimizi yonetecegiz, yine html attribute lerine benzer mantikta da attribute ler ile typescript icindeki, degiskenlere baglaycagimz two-way-binding yapacagimz dinamikligi de yine attribute ler uzerinden yapacagiz...
+-->
