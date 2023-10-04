@@ -11,9 +11,20 @@ export function navigatingTo(args: EventData) {
   const page = <Page>args.object; //page in xml deki ana page in referansi aliyor...BU COK FAZLA KULLANACAGIMZ BIR ISLEMDIR
 
   page.bindingContext = new HelloWorldModel(); //SONRA DA O REFREANSNI ALDIGMIZ PAGE I BINDING ILE BIR CLASS A BAGLIYOR VE O CLASS ICERISINDE DE XML ICERISINDEKI TUM EVENTLERI VS HEPSINI ORDAN YONETEBILIYOR BU SEKIDLE BINDING ILE BAGLAMIS OLUYOR BU SAYEDE O CLASS IN NATIVESCRIPT TARAFINDAN CODEBEHINDE YAI MAIN-PAGE2.TS TARAFINDAN YANI ASLINDA MAIN-PAGE2.XML TARAFINDAN ALGILANMASINI SAGLAMIS OLYOR..
+   myPageWasLoaded method is fired!
+   Mobile uygulmmayi birkez acip kapatirsak console.log daki sonucumuzu gorecegiz sayfa tekrardan yukendiginde....
 
 }
 
 BIZ MAIN-PAGE2.XML ILE MAIN-PAGE2.TS I AYIRMAYALIM IKISI BIRLIKTE BIR MAIN-PAGE2 OLDUDUGNU BILELIM....
 
 */
+
+function myPageWasLoaded()
+{
+  console.log("myPageWasLoaded method is fired!");
+
+}
+
+exports.myPageWasLoaded = myPageWasLoaded;
+//Zaten biz exports yazip hemen yanina memberacess syntaxi ile nokta koyarsak direk myPageWasLoaded i getirecektir kendisi...biz onu xml de tanimladigmzdan dolayi

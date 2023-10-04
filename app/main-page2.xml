@@ -1,4 +1,4 @@
-<Page>
+<Page loaded="myPageWasLoaded">
     <Label text="Hello Nativescript!" />
 </Page>
 <!--

@@ -1,4 +1,4 @@
-<Page>
+<Page loaded="myPageWasLoaded">
     <Label text="Hello World" />
 </Page>
 <!--
@@ -6,4 +6,10 @@
 
     Code-behinde nedir?
     -Code-behind demek xml imizin dinaiklik adina baglanacagi typescript dosyasidir ve xml dosyasi ile ayni isimde olmalidir
+
+    Event-Handlers
+    Oncelikle ilk once ayni html mantiginda dusunelim yani nasil ki bizim mouse uzerinde yaptgimz her bir islem aslinda bir eventhandler s idi burda da mobile uzerinde biz parmagimz ile mobile uzerinde islemler yapariz iste parmagimz ile ornegn birseyin uzerine tiklaam demek Tap demektir normal web de click olan mobile de Tap event-handler i demektir ve biz bunu ayni html deki gibi xml de taglarin icine attribute olarak yazarark tanimlariz ve o eventi de codebehind da kullanabiliriz...COOOK ONEMLI...
+    MESELA SAYFA YUKLENIR YUKLENMEZ YAPMAK ISTEDGIMIZ BIRSEY VAR ISE LOAD EVNT-HANDLER I TETIKLENIRDI AYNI MANTIK BURDA DA VAR
+    <Page loaded="myPageWasLoaded"> bu sekilde ornegin loaded eventini tanimliyoruz myPageWasLoaded isminde, bu sayfam yuklendigm de tetiklenmesini istedgimiz methodugjmuzdur(myPageWasLoaded-sayfa loaded edildiginde tetiklenecek olan mehtod)
+    Peki tamam da nativescrip nerden bilecekki bu methodun bizim loaded icin atadgmiz method oldugunu, tabi ki nativescrptin bu methodun bizim loaded metotumuz oldugnu taniyabilmesi icin de bizim, bu methodu code-behinde dosyzmidan yani xml dosymz ile ayni isimdeki .ts dosysaindan export etmemiz gerekecek
 -->
