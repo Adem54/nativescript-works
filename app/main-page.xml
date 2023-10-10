@@ -1,15 +1,28 @@
-<Page loaded="myPageWasLoaded">
-    <Label text="Hello World" />
+<Page loaded="onLoaded">
+    <FlexboxLayout class="box">
+        <StackLayout  class="form">
+            <Image src="~/images/ball.jpg" class="logo" />
+            <Label text="Beach Ball Login App" class="header"/>
+            <StackLayout class="input-field">
+            <TextField text="{{username}}" id="name" hint="Enter username" class="input"  />
+            <StackLayout class="hr-light"/>
+        </StackLayout>
+        <StackLayout class="input-field">
+            <TextField text="{{password}}" id="name" secure="true" hint="Enter password" class="input"  />
+            <StackLayout class="hr-light"/>
+            </StackLayout>
+            <!-- <Button text="Login" tap="onSubmit" class="-primary  -rounded-sm p-t-5" /> -->
+            <Button text="Login" tap="onSubmit" class="btn-primary" />
+        </StackLayout>
+    </FlexboxLayout>
 </Page>
 <!--
-    Bu sayfa bizim, interface imizi olustrudgumuz sayfadir ve, xml icerisinde biz genellikle disardan kutuphaneler araciligi ile html taglarina benzer taglar seklinde kullanabilecegimz taglar kullanaagiz ve ayni sekilde taglarin icinde de css class lari kullanarak, interfac eimizi yonetecegiz, yine html attribute lerine benzer mantikta da attribute ler ile typescript icindeki, degiskenlere baglaycagimz two-way-binding yapacagimz dinamikligi de yine attribute ler uzerinden yapacagiz...
+    Login form hazirlayacagiz yani yukardan asagi dogru dikine olacak bir layout yapacagiz o zaman burda StackLayout u tercih ediyoruz
+    StackLayout lar normal html deki bizim div lerimiz gibi veya section larimiz gibidir.. daha kolay kontrol edebilmek icin, biz tum form elementlerimiz StackLayout icerisine alarak daha kolay yerlestirebiliyoruz ve de flexboxLayout sayesinde de geene olarak tum form u istedigimz gibi yerlestirebildik...
+    Bu arada sunu da unutmayalim, ki, hazir css kutuphanesi import edildigi icn ondan gelen default css ozelliklerde geliyor...bunu bilelim..
 
-    Code-behinde nedir?
-    -Code-behind demek xml imizin dinaiklik adina baglanacagi typescript dosyasidir ve xml dosyasi ile ayni isimde olmalidir
+     <StackLayout class="hr-light"/> bu sekilde hr cigizisi StackLayout ile koyabiliyoruz
 
-    Event-Handlers
-    Oncelikle ilk once ayni html mantiginda dusunelim yani nasil ki bizim mouse uzerinde yaptgimz her bir islem aslinda bir eventhandler s idi burda da mobile uzerinde biz parmagimz ile mobile uzerinde islemler yapariz iste parmagimz ile ornegn birseyin uzerine tiklaam demek Tap demektir normal web de click olan mobile de Tap event-handler i demektir ve biz bunu ayni html deki gibi xml de taglarin icine attribute olarak yazarark tanimlariz ve o eventi de codebehind da kullanabiliriz...COOOK ONEMLI...
-    MESELA SAYFA YUKLENIR YUKLENMEZ YAPMAK ISTEDGIMIZ BIRSEY VAR ISE LOAD EVNT-HANDLER I TETIKLENIRDI AYNI MANTIK BURDA DA VAR
-    <Page loaded="myPageWasLoaded"> bu sekilde ornegin loaded eventini tanimliyoruz myPageWasLoaded isminde, bu sayfam yuklendigm de tetiklenmesini istedgimiz methodugjmuzdur(myPageWasLoaded-sayfa loaded edildiginde tetiklenecek olan mehtod)
-    Peki tamam da nativescrip nerden bilecekki bu methodun bizim loaded icin atadgmiz method oldugunu, tabi ki nativescrptin bu methodun bizim loaded metotumuz oldugnu taniyabilmesi icin de bizim, bu methodu code-behinde dosyzmidan yani xml dosymz ile ayni isimdeki .ts dosysaindan export etmemiz gerekecek
+    texField da text mi value mi kullanmaliyiz.????
+     To summarize, if you are working on a standard NativeScript project (not Angular), it's better to use text for binding data to a TextField and retrieving the user's input from the text property, as shown in the first example. If you are working on an Angular-based NativeScript project, you may have additional options related to two-way data binding with value.
 -->

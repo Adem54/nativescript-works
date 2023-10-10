@@ -4,3 +4,25 @@
 Button.-primary {
   font-size: 18;
 }
+/*
+Bu sayfada direk olarak css kullanabiliriz ama ornegin size degerlerinde px kullanmadan kullanmaliyiz, direk numara yazariz...
+*/
+
+#game
+{
+  background-color: chocolate;
+}
+
+#meta{
+  font-family: monospace;
+  font-size:12;
+  horizontal-align:right;
+  vertical-align: top;
+  margin: 10;
+}
+.info
+{
+  background-color: orange;
+}
+
+

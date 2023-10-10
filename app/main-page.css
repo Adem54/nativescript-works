@@ -1,0 +1,50 @@
+.box
+{
+    align-items: stretch;
+    flex-direction: column;
+}
+.form
+{
+
+    flex-grow:1;
+    vertical-align: middle;
+    margin: 0 30;
+}
+/*vertical-align: middle;: Sayfada dikey de ortalamasi icin bu sekilde yapilir ama flex-grow ile birlikte kullanilinca uygulanabiliyor
+
+  flex-grow:1; bunu kullaninca demis oluyourz ki, dostum sen git, parentin olan FlexboxLayout un sana biraktigi tum bos alanlari dikey de doldur demis oluyoruz..bu sayede de, o tum sayfayi dikey olarak dolduruyor ve otomatik olarak da form u sayfanin dikey de tam ortasina getiriyor
+  vertical-align is a CSS property that specifies the vertical alignment of inline or inline-block elements within their containing element.
+  This property aligns the content of the .form element vertically in the middle of the .box (which is the parent FlexboxLayout).
+  However, it may not have any effect on block-level elements like StackLayout without additional CSS properties like display: flex;.
+  Vertical align- css property si, inline-block veya inline elemntler icin gecerli olan bir ozellik iken biz bunu StackLayout gibi displayl block olan bir elementte kullandik ve normalde hehrangi bir efekt alamayiz, ama iste vertical-align in StackLayout gibi block elemntlerde kullanilabilmesi icin display-flex yani flex-grow:1 ile kullanilmasi gerekiyor
+  flex-grow: 1; makes the .form element expand vertically to take up all available space within the FlexboxLayout.
+vertical-align: middle; a
+*/
+/*
+    Bu arada sunu da unutmayalim, ki, hazir css kutuphanesi import edildigi icn ondan gelen default css ozelliklerde geliyor...bunu bilelim..
+*/
+.input-field {
+    margin-bottom: 10;
+}
+
+.btn-primary {
+    height: 50;
+    margin:30 5 15 5;
+    background-color: darkblue;
+    border-radius: 5;
+    font-size: 20;
+    font-weight: 400;
+    color: white;
+}
+
+.logo {
+    height: 100;
+    margin-bottom: 10;
+}
+
+.header {
+    text-align: center;
+    color:rgb(46,46,46);
+    margin-bottom: 30;
+    font-weight: bold;
+}
