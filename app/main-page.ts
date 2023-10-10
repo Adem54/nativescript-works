@@ -15,15 +15,16 @@ export function onLoaded(args:EventData)
 }
 
 
-export async function onSubmit(args:EventData)
+export  function onSubmit(args:EventData)
 {
   const Button = <Button>(args.object);
   const Page = Button.page as Page;
 
-  alert(`Username: ${Page.bindingContext.username}  -  Password:  ${Page.bindingContext.password}`)
+
 
   //http-request - http://localhost:1115/login
   let url = "http://localhost:1115/login";
+  url = "https://jsonplaceholder.typicode.com/users";
 
   const requestData = {
     key1: "value1",
@@ -35,12 +36,16 @@ const headers = {
 };
 
 
-// Http.getJSON(url).then(response=>{
-//   console.log("response: ", response);
-// })
+Http.getJSON(url).then(response=>{
+  console.log("response: ", (response as any).length);
+}).catch(error=>console.log("error: ", error))
 
   //if the request says success  -> dashboard
   //else show some alert message
+
+  /*
+    alert(`Username: ${Page.bindingContext.username}  -  Password:  ${Page.bindingContext.password}`)
+  */
 
 }
 
