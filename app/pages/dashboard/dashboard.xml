@@ -1,6 +1,16 @@
-<Page>
-    <StackLayout>
-    <Label text="Hello authenticated user!"/>
-    <Button text="Logout" tap="logout"/>
-    </StackLayout>
+<Page xmlns:Card="@nstudio/nativescript-cardview">
+
+    <FlexboxLayout class="box">
+        <StackLayout  class="profile">
+            <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+                <StackLayout >
+                    <image src="~/images/ball.jpg" stretch="aspectFill" colSpan="3" row="0" class="logo"  />
+                    <label text="Hello authenticated user!" class="info" textWrap="true" row="1" colSpan="3" />
+                    <button text="Logout" tap="logout" row="2" col="0" />
+
+                </StackLayout>
+            </Card:CardView>
+        </StackLayout>
+    </FlexboxLayout>
+
 </Page>

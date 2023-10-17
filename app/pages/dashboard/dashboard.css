@@ -1,9 +1,35 @@
 Page
 {
-    background-color: aqua;
+    background-color:lightgrey;
 }
 
 Button{
     background-color: tomato;
     color: #fff;
 }
+
+
+.logo {
+    height: 100;
+    margin-bottom: 10;
+}
+
+.cardStyle {
+    background-color: #3489db;
+   
+    color: #fff;
+    color: black;
+  }
+
+  .box {
+    align-items: center;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .profile {
+    flex-grow:1;
+    vertical-align: middle;
+    margin: 0 30;
+    box-shadow:0 0 10 black;
+  }
