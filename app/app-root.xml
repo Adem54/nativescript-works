@@ -1,4 +1,4 @@
-<Frame defaultPage="main-page">
+<Frame defaultPage="pages/login/login">
 </Frame>
 <!--
     Container farkli sayfalari barindiran container gibi dusunebiliriz

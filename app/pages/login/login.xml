@@ -2,7 +2,7 @@
     <FlexboxLayout class="box">
         <StackLayout  class="form">
             <Image src="~/images/ball.jpg" class="logo" />
-            <Label text="Beach Ball Login App" class="header"/>
+            <Label text="Beach Ball My Login App" class="header"/>
             <StackLayout class="input-field">
             <TextField text="{{username}}" id="name" hint="Enter username" class="input"  />
             <StackLayout class="hr-light"/>

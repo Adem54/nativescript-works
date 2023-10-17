@@ -1,0 +1,6 @@
+<Page>
+    <StackLayout>
+    <Label text="Hello authenticated user!"/>
+    <Button text="Logout" tap="logout"/>
+    </StackLayout>
+</Page>
