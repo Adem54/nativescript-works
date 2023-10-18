@@ -16,7 +16,7 @@ Button{
 
 .cardStyle {
     background-color: #3489db;
-   
+
     color: #fff;
     color: black;
   }
@@ -32,4 +32,16 @@ Button{
     vertical-align: middle;
     margin: 0 30;
     box-shadow:0 0 10 black;
+  }
+
+  /*
+  nativescriptte display flex diye birsey yoktur onun yerine zaten biz FlexBoxLayout kullaninca otomatik olarak display flex yapmis oluyoruz...bunu bilmek cok onemlidir
+  */
+  .container {
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   flex-direction: column;
+
   }

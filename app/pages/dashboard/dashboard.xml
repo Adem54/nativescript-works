@@ -1,16 +1,26 @@
-<Page xmlns:Card="@nstudio/nativescript-cardview">
-
+<Page xmlns:Card="@nstudio/nativescript-cardview"
+loaded="onLoaded"
+navigatedTo="onNavigatedTo"
+>
     <FlexboxLayout class="box">
         <StackLayout  class="profile">
             <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
-                <StackLayout >
+                <FlexboxLayout class="container" >
                     <image src="~/images/ball.jpg" stretch="aspectFill" colSpan="3" row="0" class="logo"  />
-                    <label text="Hello authenticated user!" class="info" textWrap="true" row="1" colSpan="3" />
+                    <Label class="field top" text="{{ 'Name: '+ name }}"/>
+                    <Label class="field" text="{{ 'Favfood: '+ favfood }}"/>
+                    <Label class="field" text="{{ 'Speaks: '+ speaks }}"/>
                     <button text="Logout" tap="logout" row="2" col="0" />
 
-                </StackLayout>
+                </FlexboxLayout>
             </Card:CardView>
         </StackLayout>
     </FlexboxLayout>
 
 </Page>
+<!--
+<Label class="field top" text="{{'Name: '+ name}}"/>
+                    <Label class="field" text="{{'Fav.Food: '+ favfood}}"/>
+                    <Label class="field" text="{{'Speaks: '+ speaks}}"/>
+
+ -->

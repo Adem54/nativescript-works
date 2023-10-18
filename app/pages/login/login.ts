@@ -1,4 +1,6 @@
-import { Button, EventData, Page, fromObject, Http, Frame } from "@nativescript/core";
+import { Button, EventData, Page, fromObject, Http, Frame , NavigationEntry} from "@nativescript/core";
+import { Application, ApplicationSettings } from "tns-core-modules";
+
 
 let myObj = fromObject({
   username:"",
@@ -36,14 +38,25 @@ export  function onSubmit(args:EventData)
     //Dashobard sayfasina gidince normalde en ustte nativescirpt tarafndan gelen Back buton veya linki var bizim bir onceki sayfaya donmemizi saglayan ama bu Back butonu muhtemelen Ios lar icin gecerli andorid ler icin gecerli olmayabilir ya da tam tersi
     //Sunu iyi bilelim, bizim datayi store, nasil tutacagimz ve sayfalar arasi geciste nasil data aktarabilecegimz cok onemlidir...ki login sayfasindan verileri kontrol ettik dogru ise ornegin kullaniciyi dashboarda gonderdik ne yapacagiz tabi ki kullanici bilgilerini biz dashboard da gosterecegiz....
 
+    //BU DATAYI NAVIGE OLDUGUMUZ SAYFAYA NASIL GONDERIRIZ?
+    let data = {
+      name:"ZehraNEW",
+      favfood:"KebapNEW",
+      speaks:"NorweiganNEW"
+    }
+
     let options = {
       moduleName:"pages/dashboard/dashboard",
-      clearHistory:true,//yeni sayfaya navige olduktan sonra, gerideki bilgileri sil, veya unut demek, bu da kullanicinin geldigi sayfaya geri donmesini engeller, bu bazi spesifik durumlarda ihtiyac duyulan bir ozelliktir...biz kullanicimizin bazen geldigi sayfaya kendisinin nativescript tarafindan verilen natural, default yollarla donmemesini isteyebiliriz...iste bu sekilde engelleriz, ya da bir onceki sayfay geri gelme islemini bizim kontrolumuzde gerceklesmesini ve bizim yontemizi isteriz...boyle durumlarda da biz bu islemi yapariz, bu sekilde de bir sayfadan digerine navige olunca default olarak gelen Back linkini kaldirmis oluyoruz
-
+      clearHistory:true,
+      context:{
+          data
+      }
     }
-    frame.navigate(options)
+    //BESTPRACTISE...
+    //DAtayi bu sekkilidle ApplicationSEttings e kaydedecegmz icin artik, login page dan dashboard page e navige olurken, data yi gondermemiz gerek yok, cunku ApplicationSettings e kaydettimz data ya uygulama boyunca her yerden erisebiliriz ve datayi da offline olarak tutabiliriz ve kaybetmeyizde
+    ApplicationSettings.setString("userData", JSON.stringify(data));
+     frame.navigate(options)
   }
-
 }
 
   //if the request says success  -> dashboard
